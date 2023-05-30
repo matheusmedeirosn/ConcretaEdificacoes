@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="/reset.css">
     <link rel="stylesheet" href="/global.css">
     <link rel="stylesheet" href="cadastroClienteJuridico.css"> 
+    <link rel="stylesheet" href="/BarraDeNavegacao.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Concreta Edificações</title>
 </head>
 <body>
     
-    <include src="/BarraDeNavegacao.html"></include>
+    <div id="barraDeNavegacao"></div>
 
     <main class="container_main">
         <h1 class="titulo">Cadastro de</br>cliente jurídico
@@ -56,6 +58,11 @@
         </section>
     </main>
 
+    <script>
+        $(document).ready(function() {
+            $('#barraDeNavegacao').load('/BarraDeNavegacao.html');
+        });
+      </script>
 
     <footer></footer>
 </body>

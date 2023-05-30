@@ -1,12 +1,9 @@
-body{
-  spadding-top: 1rem;
-}
-
 .container_main{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 10%;
+    justify-content: center;
+    margin-left: 10%;
+    margin-top: 3%;
     width: 75%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -16,9 +13,6 @@ input, label, select{
 h1{
     width: 30%;
 }
-/* .container_main{
-    margin-top: 3%;
-} */
 .linha{
     display: flex;
     gap: 3%;
