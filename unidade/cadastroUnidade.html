@@ -10,22 +10,7 @@
     <link rel="stylesheet" href="cadastroUnidade.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/BarraDeNavegacao.css">
-    <script>
-        $(document).ready(function() {
-          $('#cep').blur(function() {
-            var cep = $(this).val().replace(/\D/g, '');
-            if (cep.length != 8) {
-              return false;
-            }
-            $.getJSON('https://viacep.com.br/ws/' + cep + '/json/?callback=?', function(data) {
-              $('#logradouro').val(data.logradouro);
-              $('#bairro').val(data.bairro);
-              $('#cidade').val(data.localidade);
-              $('#estado').val(data.uf);
-            });
-          });
-        });
-        </script>  
+    
     <title>Concreta Edificações</title>
 </head>
 <body>
@@ -44,10 +29,10 @@
                 <input type="number" id="cod_unidade" required="" min="0" title="Você precisa colocar um valor maior que 0"></br>
                 <label for="engheiro_responsavel">Engenheiro responsável</label></br>
                 <input type="text" id="engheiro_responsavel" required="" pattern="[A-Za-z]+" title="Você deve colocar apenas letras"></br>
-                <label for="data_inicial_unidade">Data inicial</label></br>
-                <input type="date" id="previsão_entrega" class="input_data" required="" min="2000-01-01" max="2026-12-30"></br></br>
-                <label for="previsão_entrega_unidade">Previsão de entrega</label></br>
-                <input type="date" id="previsão_entrega" class="input_data" required="" min="2020-01-01" max="2030-12-30"></br></br>
+                <label for="data_inicial">Data inicial</label></br>
+                <input type="date" id="data_inicial" class="input_data" required="" min="2000-01-01" max="2026-12-30"></br></br>
+                <label for="previsão_entrega">Previsão de entrega</label></br>
+                <input type="date" id="previsão_entrega" class="input_data" required="" min="2020-01-01" max="2030-12-30" onblur="verificacao()"></br></br>
                 <label for="cep">CEP</label></br>
                 <input type="text" id="cep" required="" pattern="[0-9]{8}" title="Insira um CEP válido (ex: 12345678)"></br>
                 <label for="estado">Estado</label></br>
@@ -72,10 +57,36 @@
         </section>
     </main>
 
-    <script>
-      $(document).ready(function() {
-          $('#barraDeNavegacao').load('/BarraDeNavegacao.html');
-      });
+    <script>  
+      function verificacao(){
+        var data_inicial = document.querySelector('#data_inicial');
+        var previsão_entrega = document.querySelector('#previsão_entrega');
+        console.log(data_inicial.value, previsão_entrega.value)
+
+
+      if(data_inicial.value > previsão_entrega.value){
+        alert("A data inicial não pode ser maior do que a de previsão de entrega!");
+        data_inicial.value = '';
+        previsão_entrega.value = '';
+      }
+      }
+
+        $(document).ready(function() {
+          $('#cep').blur(function() {
+            var cep = $(this).val().replace(/\D/g, '');
+            if (cep.length != 8) {
+              return false;
+            }
+            $.getJSON('https://viacep.com.br/ws/' + cep + '/json/?callback=?', function(data) {
+              $('#logradouro').val(data.logradouro);
+              $('#bairro').val(data.bairro);
+              $('#cidade').val(data.localidade);
+              $('#estado').val(data.uf);
+            });
+          });
+        });
+ 
+      
     </script>
 
     <footer></footer>
