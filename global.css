@@ -10,6 +10,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#concretaLink{
+  color: black;
+  text-decoration: none;
+}
+
 .dropdown {
     position: relative;
   }

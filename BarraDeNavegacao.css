@@ -344,3 +344,41 @@
   
   
   }
+
+  .modal-right .modal-dialog {
+    margin-left: auto;
+    margin-right: 20px;
+    transform: translateX(0);
+  }
+  
+  .modal-right .modal-content {
+    border-radius: 15px;
+    border: none; /* Remove a borda do modal */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao modal */
+  }
+  
+
+
+  .modal-right .modal-content {
+    background-color: #f8f9fa; /* Define uma cor de fundo */
+  }
+  
+  .modal-right .modal-header {
+    background-color: #d32a35; /* Define uma cor de fundo para o cabeçalho */
+    color: #fff; /* Define a cor do texto do cabeçalho */
+  }
+  
+  .modal-right .modal-body {
+    padding: 20px; /* Adiciona um espaçamento interno no corpo do modal */
+  }
+  
+  .modal-right .close {
+    color: #fff; /* Define a cor do ícone de fechar */
+    opacity: 0.8; /* Define a opacidade do ícone de fechar */
+    transition: opacity 0.3s; /* Adiciona uma transição suave */
+  }
+  
+  .modal-right .close:hover {
+    opacity: 1; /* Aumenta a opacidade do ícone de fechar ao passar o mouse */
+  }
+  
