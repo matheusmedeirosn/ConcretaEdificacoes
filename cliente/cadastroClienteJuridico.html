@@ -36,10 +36,12 @@
                 <input type="email" id="email_cliente_juridico" required="" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Digite um endereço de e-mail válido no formato exemplo@dominio.com"></br>
                 <label for="telefone_cliente_juridico">Telefone</label></br>
                 <input type="tel" id="telefone_cliente_juridico" required="" pattern="\(\d{2}\)\d{4,5}-\d{4}" title="Insira um número de telefone válido (ex: (11)1234-5678 ou (11)91234-5678)"></br>
-                <label for="CEP_clienteJuridico">CEP</label></br>
-                <input type="text" id="CEP_clienteJuridico" required="" pattern="[0-9]{5}-[0-9]{3}" title="Insira um CEP válido (ex: 12345-678)"></br>
+                <label for="inscricaoEstadual">Inscrição estadual</label> <br>
+                <input type="text" name="inscricaoEstadual" id="inscricaoEstadual" pattern="[0-9]{9}" title="Insira uma inscrição estadual válida de 9 dígitos" required>
             </div>
                 <div class="coluna-50">
+                <label for="CEP_clienteJuridico">CEP</label></br>
+                <input type="text" id="CEP_clienteJuridico" required="" pattern="[0-9]{5}-[0-9]{3}" title="Insira um CEP válido (ex: 12345-678)"></br>
                 <label for="estado_clienteJuridico">Estado</label></br>
                 <input type="text" id="estado_clienteJuridico" required="" pattern="[A-Z]{2}" title="Você deve colocar apenas letras"></br>
                 <label for="cidade_clienteJuridico">Cidade</label></br>
