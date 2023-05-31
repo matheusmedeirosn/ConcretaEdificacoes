@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/reset.css">
     <link rel="stylesheet" href="/global.css">
     <link rel="stylesheet" href="cadastroProjeto.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/BarraDeNavegacao.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Concreta Edificações</title>
@@ -62,7 +61,7 @@
                 <label for="cod_projeto" >Código do projeto</label></br>
                 <input type="text" id="cod_projeto" required="" min="0" title="Você precisa colocar um valor maior que 0"></br>
                 <label for="engenheiro_responsavel">Engenheiro responsável</label></br>
-                <input type="text" id="engenheiro_responsavel" required="" pattern="[A-Za-z]+" title="Você deve colocar apenas letras"></br>
+                <input type="text" id="engenheiro_responsavel" required="" pattern="[A-Za-z\s]+" title="Você deve colocar apenas letras"></br>
                 <label for="data_inicial">Data inicial</label></br>
                 <input type="date" id="data_inicial" class="input_data" required="" min="2000-01-01" max="2025-12-30"></br>
                 <label for="previsão_entrega">Previsão de entrega</label></br>
@@ -70,13 +69,13 @@
                 <label for="cep">CEP</label></br>
                 <input type="text" id="cep" required="" pattern="[0-9]{8}" title="Insira um CEP válido (ex: 12345678)"></br>
                 <label for="estado">Estado</label></br>
-                <input type="text" id="estado" required="" pattern="[A-Za-z]+" title="Você deve colocar apenas letras"></br>
+                <input type="text" id="estado" required="" pattern="[A-Z]{2}" title="Insira exatamente duas letras MAIÚSCULAS" title="Você deve colocar apenas letras"></br>
               </div>  
               <div class="coluna-50">
                 <label for="cidade">Cidade</label></br>
-                <input type="text" id="cidade" required="" pattern="[A-Za-z]+" title="Você deve colocar apenas letras"></br>
+                <input type="text" id="cidade" required="" pattern="[A-Za-z\s]+" title="Você deve colocar apenas letras"></br>
                 <label for="bairro">Bairro</label></br>
-                <input type="text" id="bairro" required="" pattern="[A-Za-z]+" title="Você deve colocar apenas letras"></br>
+                <input type="text" id="bairro" required="" pattern="[A-Za-z\s]+" title="Você deve colocar apenas letras"></br>
                 <label for="logradouro">Logradouro</label></br>
                 <input type="text" id="logradouro" required=""></br>
                 <label for="numero_projeto">Número</label></br>

@@ -25,11 +25,11 @@
             <form action="" class="linha">
                 <div class="coluna-50">
                 <label for="nome_cliente_juridico">Nome do cliente</label></br>
-                <input type="text" id="nome_cliente_juridico" required=""></br>
+                <input type="text" id="nome_cliente_juridico" required="" pattern="[A-Za-z\s]+" title="Você deve colocar apenas letras"></br>
                 <label for="CNPJ_cliente_juridico">CNPJ</label></br>
                 <input type="text" id="CNPJ_cliente_juridico" required="" pattern="\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}" title="Insira um CNPJ válido (ex: 12.345.678/0001-90)"></br>
                 <label for="nomeFantasia_cliente_juridico">Nome fantasia</label></br>
-                <input type="text" id="nomeFantasia_cliente_juridico"></br>
+                <input type="text" id="nomeFantasia_cliente_juridico" ></br>
                 <label for="razaoSocial_cliente_juridico">Razão social</label></br>
                 <input type="text" id="razaoSocial_cliente_juridico" required=""></br>
                 <label for="email_cliente_juridico">Email</label></br>
@@ -41,11 +41,11 @@
             </div>
                 <div class="coluna-50">
                 <label for="estado_clienteJuridico">Estado</label></br>
-                <input type="text" id="estado_clienteJuridico" required="" pattern="[A-Za-z]+" title="Você deve colocar apenas letras"></br>
+                <input type="text" id="estado_clienteJuridico" required="" pattern="[A-Z]{2}" title="Você deve colocar apenas letras"></br>
                 <label for="cidade_clienteJuridico">Cidade</label></br>
-                <input type="text" id="cidade_clienteJuridico required="" pattern="[A-Za-z]+" title="Você deve colocar apenas letras"></br>
+                <input type="text" id="cidade_clienteJuridico required="" pattern="[A-Za-z\s]+" title="Você deve colocar apenas letras"></br>
                 <label for="bairro_clienteJuridico">Bairro</label></br>
-                <input type="text" id="bairro_clienteJuridico" required="" pattern="[A-Za-z]+" title="Você deve colocar apenas letras"></br>
+                <input type="text" id="bairro_clienteJuridico" required="" pattern="[A-Za-z\s]+" title="Você deve colocar apenas letras"></br>
                 <label for="logradouro_clienteJuridico">Logradouro</label></br>
                 <input type="text" id="logradouro_clienteJuridico" required=""></br>
                 <label for="numero_clienteJuridico">Número</label></br>

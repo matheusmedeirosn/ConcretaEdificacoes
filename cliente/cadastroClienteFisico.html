@@ -26,7 +26,7 @@
             <form action="" class="linha">
                 <div class="coluna-50">
                 <label for="nome_cliente_fisico">Nome do cliente</label></br>
-                <input type="text" id="nome_cliente_fisico" pattern="[A-Za-z]+" required="" title="Você deve colocar apenas letras"></br>
+                <input type="text" id="nome_cliente_fisico" pattern="[A-Za-z\s]+" required="" title="Você deve colocar apenas letras"></br>
                 <label for="CPF_cliente_fisico">CPF</label></br>
                 <input type="text" id="CPF_cliente_fisico" required="" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Insira um CPF válido (ex: 123.456.789-10)"></br>
                 
@@ -47,11 +47,11 @@
             </div>
                 <div class="coluna-50">
                 <label for="estado_clienteFisico">Estado</label></br>
-                <input type="text" id="estado_clienteFisico" required="" pattern="[A-Za-z]+" title="Você deve colocar apenas letras"></br>
+                <input type="text" id="estado_clienteFisico" required="" pattern="[A-Z]{2}" title="Você deve colocar apenas letras"></br>
                 <label for="cidade_clienteFisico">Cidade</label></br>
-                <input type="text" id="cidade_clienteFisico" required="" pattern="[A-Za-z]+" title="Você deve colocar apenas letras"></br>
+                <input type="text" id="cidade_clienteFisico" required="" pattern="[A-Za-z\s]+" title="Você deve colocar apenas letras"></br>
                 <label for="bairro_clienteFisico">Bairro</label></br>
-                <input type="text" id="bairro_clienteFisico" required="" pattern="[A-Za-z]+" title="Você deve colocar apenas letras"></br>
+                <input type="text" id="bairro_clienteFisico" required="" pattern="[A-Za-z\s]+" title="Você deve colocar apenas letras"></br>
                 <label for="logradouro_clienteFisico">Logradouro</label></br>
                 <input type="text" id="logradouro_clienteFisico" required=""></br>
                 <label for="numero_clienteFisico">Número</label></br>
