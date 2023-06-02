@@ -382,3 +382,77 @@
     opacity: 1; /* Aumenta a opacidade do ícone de fechar ao passar o mouse */
   }
   
+
+
+
+
+
+  .modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    
+  }
+  
+  .modal-dialog {
+    width: 20%; 
+    max-width: 600px;
+    float: right;
+    margin: 1%;
+    border: 1px solid #888;
+    border-radius: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d32a35;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .modal-title {
+    margin: 0;
+    font-size: 30px;
+  }
+  
+  .modal-body {
+    font-size: 20px;
+    line-height: 23px;
+    padding: 20px;
+    padding-top: 10px;
+  }
+  
+  .close {
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    font-size: 35px;
+    line-height: 1;
+    color: #fff; 
+    transition: opacity 0.3s ease;   
+  }
+  
+  .close:hover {
+    opacity: 0.5;
+  }
+
+
+
+  @media (max-width: 1650px) {
+    .modal-dialog {
+      width: 30%;
+    }
+  }
+  @media (max-width: 1200px) {
+    .modal-dialog {
+      width: 40%;
+    }
+  }

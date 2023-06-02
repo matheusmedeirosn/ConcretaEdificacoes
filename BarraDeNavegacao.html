@@ -7,9 +7,25 @@
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="BarraDeNavegacao.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
     <title>Concreta Edificações</title>
+    <script>
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+        var modal = document.getElementById("myModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+
+    </script>
 </head>
 <body>
 <nav class="navegacao">   
@@ -43,33 +59,35 @@
             <li><a class="dropdown-item" href="/profissional/visualizaçãoProfissional.html">Profissional</a></li>
         </div>
       </div><br>
-    <li class="nav_btn nav-items" id="settings"><a class="btn_semdrop" href="/configuração/configurações.html">Configurações</a></li>
+      <li class="nav_btn nav-items" id="settings"><a class="btn_semdrop" href="/configuração/configurações.html">Configurações</a></li>
     <!-- Botão que abre o modal -->
-<li class="nav_btn nav-items" id="perfil_nav" data-toggle="modal" data-target="#myModal" style="cursor: pointer;">Nome do colaborador<br>& Cargo</li>
+<li class="nav_btn nav-items" id="perfil_nav" onclick="openModal()" style="cursor: pointer;">Nome do colaborador<br>& Cargo</li>
 
 <!-- Modal -->
-<div class="modal fade modal-right" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h2 class="modal-title">Painel de usuário</h2>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        
+
+        <button type="button" class="close" onclick="closeModal()">&times;</button>
       </div>
+      
       <div class="modal-body">
         <!-- Conteúdo do modal -->
+        
         <br>
         <h3>Login: Erick Goldberg</h3>       
         <h3>Função: Desenvolvedor</h3>
         <h3>Titulação: Desenvolvedor Full-Stack</h3>
         <h3>Matrícula: 20394278</h3>
-        <h3>CPF: 025.589.561-09</h3>
-        
+        <h3>CPF: 025.589.561-09</h3>        
       </div>
     </div>
   </div>
 </div>
+
 
 
 </ul>
@@ -130,6 +148,4 @@
         </div>
     </div>
 </header>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
