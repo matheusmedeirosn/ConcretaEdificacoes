@@ -40,7 +40,7 @@
             <img id="imagemConcreta" src="/imagens/logo_concreta.png" alt="Logo da concreta" >
           </h1>
         <section>
-            <form action="" class="linha">
+            <form action="" class="linha" onsubmit="popUp()">
               <div class="coluna-50">
                 <label for="CNPJ_fornecedor">CNPJ do fornecedor</label></br>
                 <input type="text" id="CNPJ_fornecedor" required="" pattern="\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}" title="Insira um CNPJ válido (ex: 12.345.678/0001-90)"></br>
@@ -81,5 +81,6 @@
     </script>
 
     <footer></footer>
+    <script src="/popUp.js"></script>
 </body>
 </html>

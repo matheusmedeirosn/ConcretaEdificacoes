@@ -23,7 +23,7 @@
                 <img id="imagemConcreta" src="/imagens/logo_concreta.png" alt="Logo da concreta">
             </h1>
         <section class="formulario">
-            <form action="" class="linha">
+            <form action="" class="linha" onsubmit="popUp()">
                 <div class="coluna-50">
                 <label for="nome_cliente_fisico">Nome do cliente</label></br>
                 <input type="text" id="nome_cliente_fisico" pattern="[A-Za-z\s]+" required="" title="Você deve colocar apenas letras" !important></br>
@@ -71,5 +71,6 @@
     </script>
 
     <footer></footer>
+    <script src="/popUp.js"></script>
 </body>
 </html>
